@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Student {
+	public static void main (String args[])
+	{
+		int marks, age, i=0;
+		String name;
+		for (i=0;i<=2;i++)
+		{
+	      System.out.println("Enter the Name of Student");
+	      Scanner in = new Scanner(System.in);	      
+	      name = in.next();
+	      System.out.println("Enter the Age of Student");
+	      Scanner in1 = new Scanner(System.in);	      
+	      age = in.nextInt();
+	      System.out.println("Enter the Marks of Student");
+	      Scanner in3 = new Scanner(System.in);	      
+	      marks = in.nextInt();
+	      Result gz = new Result();
+	      gz.Grade(marks, age, name);
+		}
+
+	}
+
+}
+class Result
+{
+	public void Grade(int marks, int age, String name)
+	{
+		System.out.println("Result for "+name);
+		if (marks > 70)
+		{
+			System.out.println("Your Grade is A");
+		} 
+		else if (marks <= 70 && marks > 61) 
+		{
+			System.out.println("Your Grade is B");
+		} else if (marks <= 60 && marks > 0)
+		{
+			System.out.println("Your Grade is C");
+		}
+		System.out.println(name +" age is "+age);
+		
+	}
+}
